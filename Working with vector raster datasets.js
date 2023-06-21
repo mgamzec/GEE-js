@@ -1,20 +1,3 @@
-/*
-This part will cover:
-
-3.1. Where to get different datasets for GEE
-3.2. How to import and visualize vector datasets
-3.3. How to import and visualize raster datasets
-3.4. How to import your own vector or raster dataset in GEE
-
-code link: 
-https://code.earthengine.google.com/534a2fd5728fe113788085f2cacdc445
-*/
-
-//3.1. Where to get different datasets for GEE
-//https://developers.google.com/earth-engine/datasets
-//https://samapriya.github.io/awesome-gee-community-datasets/
-
-//3.2. How to import and visualize vector datasets
 var dataset = ee.FeatureCollection("FAO/GAUL/2015/level0");
 
 // html website: https://htmlcolorcodes.com/
