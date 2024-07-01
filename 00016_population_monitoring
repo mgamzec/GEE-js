@@ -1,0 +1,25 @@
+/*
+POPULATION MONITORING
+*/
+
+
+
+var cor = [49.648641123960516,37.29255382495616]
+
+var loc = ee.Geometry.MultiPoint(cor)
+
+var roi = table.filterBounds(loc);
+
+Map.centerObject(roi)
+Map.addLayer(roi)
+
+var pop = ee.ImageCollection("JRC/GHSL/P2023A/GHS_POP")
+
+Map.addLayer(pop.toBands().clip(roi),[],'pop',false)
+
+print(
+  ui.Chart.image.series(pop, roi, ee.Reducer.sum(),
+  100, 'system:time_start')
+  )
+
+
